@@ -139,9 +139,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const apiKey = apiKeyInput.value.trim();
         const files = fileInput.files;
 
-        if (!apiKey || files.length === 0) {
-             logStatus('Error: API Key and at least one PDF file are required.');
-             errorMessage.textContent = 'API Key and at least one PDF file are required.';
+        if (files.length === 0) {
+             logStatus('Error: At least one PDF file are required.');
+             errorMessage.textContent = 'At least one PDF file are required.';
              errorArea.style.display = 'block';
              return;
         }
